@@ -1,11 +1,21 @@
 public class factorial_number {
-    public static void main(String[] args) {
-        int i,fact=1;
-        int number=5;//It is the number to calculate factorial
-        for(i=1;i<=number;i++){
+    static int factorial(int number) {
+        int fact=1;
+        for(int i=1;i<=number;i++){
             fact=fact*i;
         }
-        System.out.println("Factorial of "+number+" is: "+fact);
+        return fact;
     }
 
+    public static void main(String[] args) {
+        int number=5;
+        System.out.println(factorial(number));
+    }
 }
+//    int i,fact=1;
+//    int number=5;
+//        for(i=1;i<=number;i++){
+//        fact=fact*i;
+//    }
+//        System.out.println("Factorial of "+number+" is: "+fact);
+//}

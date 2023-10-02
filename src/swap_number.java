@@ -1,28 +1,15 @@
 public class swap_number {
-
-	public static void main(String[] args) {
-		int x = 100, y = 200;
-		 
-        System.out.println("Before Swap");
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
- 
-        int temp = x;
-        x = y;
-            System.out.println(x);
-        y = temp;
-        
-        System.out.println("After swap");
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
-        
-        int a = 10;
-        int b = 5;
-        System.out.println("Before swapping:" + " a = " + a + ", b = " + b);
-        a = a + b;
-        b = a - b;
-        a = a - b;
-        System.out.println("After swapping:" + " a = " + a + ", b = " + b);
-	}
-
+    static int[] swap(int num1,int num2){
+        int temp=num1;
+        num1=num2;
+        num2=temp;
+        int swappedValues[]={num1,num2};
+        return swappedValues;
+    }
+    public static void main(String[] args) {
+        int a=5,b=10;
+        int swapped[]=swap(a,b);
+        System.out.println("Original values: "+"a="+a+" "+"b="+b);
+        System.out.println("Swapped values: "+"a="+swapped[0]+" "+"b="+swapped[1]);
+    }
 }
